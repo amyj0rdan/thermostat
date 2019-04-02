@@ -65,4 +65,12 @@ describe('Thermostat', function() {
     })
   });
 
+  it('can reset the temperature to 20 degrees', function() {
+    for (var i = 0; i < 4; i++) {
+      thermostat.up();
+    }
+    thermostat.reset();
+    expect(thermostat.getCurrentTemperature()).toEqual(20);
+  });
+
 })
