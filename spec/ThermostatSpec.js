@@ -86,7 +86,8 @@ describe('Thermostat', function() {
     });
 
     it('returns high-usage when temperature is above 25 degrees', function() {
-      for (var i = 0; i < 5; i++) {
+      thermostat.powerSavingMode = false;
+      for (var i = 0; i < 6; i++) {
         thermostat.up();
       }
       expect(thermostat.currentEnergyUsage()).toEqual('high-usage');
