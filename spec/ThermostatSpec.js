@@ -25,8 +25,10 @@ describe('Thermostat', function() {
     thermostat.temperature = 10
     expect( function() { thermostat.down(); }).toThrow(new Error('Already at minimum temperature!'));
 
-  }
+  });
 
-)
+  it('is in power saving mode', function() {
+    expect(thermostat.powerSavingMode).toEqual(true);
+  });
 
 })

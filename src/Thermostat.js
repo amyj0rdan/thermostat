@@ -2,7 +2,7 @@ function Thermostat() {
 
   this.temperature = 20;
   this.min_temperature = 10;
-
+  this.powerSavingMode = true;
 };
 
 Thermostat.prototype.up = function() {
