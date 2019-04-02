@@ -1,17 +1,24 @@
 describe('Thermostat', function() {
 
-  var thermostat = new Thermostat;
+  var thermostat;
 
-  it('temperature starts at 20 degrees', function()
-  {
+  beforeEach(function() {
+    thermostat = new Thermostat();
+  });
+
+  it('temperature starts at 20 degrees', function() {
     expect(thermostat.temperature).toEqual(20);
   });
 
-  it('can increase the temperature with up function', function()
-  {
-    thermostat.up()
+  it('can increase the temperature', function() {
+    thermostat.up();
     expect(thermostat.temperature).toEqual(21);
 
+  });
+
+  it('can decrease the temperature', function() {
+    thermostat.down();
+    expect(thermostat.temperature).toEqual(19);
   });
 
 })
