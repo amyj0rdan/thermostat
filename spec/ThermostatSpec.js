@@ -21,4 +21,12 @@ describe('Thermostat', function() {
     expect(thermostat.temperature).toEqual(19);
   });
 
+  it('raises an error when below minimum temp', function(){
+    thermostat.temperature = 10
+    expect( function() { thermostat.down(); }).toThrow(new Error('Already at minimum temperature!'));
+
+  }
+
+)
+
 })
