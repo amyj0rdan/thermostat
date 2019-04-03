@@ -2,33 +2,34 @@ let thermostat = new Thermostat();
 
 $(document).ready(function(){
 
-  function updateTemperature () {
+  function refreshValues () {
     $('#temperature-value').text(thermostat.getCurrentTemperature());
+    $('#temperature').attr('class', thermostat.currentEnergyUsage());
   }
 
   $('#temperature-up').click(function(){
     thermostat.up();
-    updateTemperature();
+    refreshValues();
   });
 
   $('#temperature-down').click(function(){
     thermostat.down();
-    updateTemperature();
+    refreshValues();
   });
 
   $('#temperature-reset').click(function(){
     thermostat.reset();
-    updateTemperature();
+    refreshValues();
   });
 
   $('#psm-on').click(function(){
     thermostat.switchOnPowerSavingMode();
-    updateTemperature();
-  })
+    refreshValues();
+  });
 
   $('#psm-off').click(function(){
     thermostat.switchOffPowerSavingMode();
-    updateTemperature();
-  })
+    refreshValues();
+  });
 
 });

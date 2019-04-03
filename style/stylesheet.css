@@ -20,3 +20,15 @@ button {
   width: 450px;
   margin: 0 auto;
 }
+
+.low-usage {
+  color: #28a745;
+}
+
+.medium-usage {
+  color: orange;
+}
+
+.high-usage {
+  color: #dc3545;
+}
