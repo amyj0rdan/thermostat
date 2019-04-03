@@ -22,13 +22,19 @@ $(document).ready(function(){
     refreshValues();
   });
 
-  $('#psm-on').click(function(){
-    thermostat.switchOnPowerSavingMode();
-    refreshValues();
-  });
+  $('#psm-toggle').click(function(){
+    if (thermostat.isPowerSavingModeOn()) {
+      thermostat.switchOffPowerSavingMode();
+      $('#psm-toggle').text('On');
+      $('#psm-indicator').removeClass('btn-success').addClass('btn-danger');
+      $('#psm-indicator').text('Power saving is off');
+    } else {
+      thermostat.switchOnPowerSavingMode();
+      $('#psm-toggle').text('Off');
+      $('#psm-indicator').removeClass('btn-danger').addClass('btn-success');
+      $('#psm-indicator').text('Power saving is on');
+    }
 
-  $('#psm-off').click(function(){
-    thermostat.switchOffPowerSavingMode();
     refreshValues();
   });
 

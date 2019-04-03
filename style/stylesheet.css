@@ -11,6 +11,16 @@ button {
   text-align: center;
 }
 
+#psm-indicator.btn-success:hover {
+  background-color: #28a745;
+  cursor: default;
+}
+
+#psm-indicator.btn-danger:hover {
+  background-color: #dc3545;
+  cursor: default;
+}
+
 #psm-status {
   font-size: 20px;
   text-align: center;
