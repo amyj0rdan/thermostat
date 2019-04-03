@@ -1,0 +1,22 @@
+button {
+  margin: 5px;
+}
+
+#temperature, #change-temp, #psm-control {
+  margin: 10px;
+}
+
+#temperature {
+  font-size: 100px;
+  text-align: center;
+}
+
+#psm-status {
+  font-size: 20px;
+  text-align: center;
+}
+
+#thermostat {
+  width: 450px;
+  margin: 0 auto;
+}
