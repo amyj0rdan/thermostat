@@ -20,4 +20,15 @@ $(document).ready(function(){
     thermostat.reset();
     updateTemperature();
   });
+
+  $('#psm-on').click(function(){
+    thermostat.switchOnPowerSavingMode();
+    updateTemperature();
+  })
+
+  $('#psm-off').click(function(){
+    thermostat.switchOffPowerSavingMode();
+    updateTemperature();
+  })
+
 });

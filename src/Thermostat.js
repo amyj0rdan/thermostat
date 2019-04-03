@@ -24,9 +24,9 @@ Thermostat.prototype.up = function() {
 
 Thermostat.prototype.isMaximumTemperature = function() {
   if(this.isPowerSavingModeOn() === false) {
-    return this.temperature === this.MAX_TEMP_PSM_OFF;
+    return this.temperature >= this.MAX_TEMP_PSM_OFF;
   }
-  return this.temperature === this.MAX_TEMP_PSM_ON;
+  return this.temperature >= this.MAX_TEMP_PSM_ON;
 };
 
 Thermostat.prototype.isMinimumTemperature = function() {
